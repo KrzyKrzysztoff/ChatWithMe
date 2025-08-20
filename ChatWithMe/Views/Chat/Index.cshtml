@@ -1,0 +1,32 @@
+﻿<div class="container my-4">
+    <div class="card shadow" style="max-width: 500px; margin: auto;">
+        <div class="card-header bg-primary text-white text-center">
+            <strong>Chat</strong>
+        </div>
+
+        <div class="card-body" style="height: 300px; overflow-y: auto;">
+            <div class="mb-3">
+                <input type="text" id="usernameInput" class="form-control mb-2" placeholder="Nazwa użytkownika">
+                <input type="text" id="roomnameInput" class="form-control" placeholder="Nazwa grupy">
+            </div>
+
+            <div id="messagesContainer" style="height: 200px; overflow-y: auto; border: 1px solid #ddd; border-radius: 4px; padding: 5px;">
+            </div>
+        </div>
+
+        <div class="card-footer">
+            <div class="input-group mb-3">
+                <input type="text" id="messageInput" class="form-control" placeholder="Napisz wiadomość...">
+                <button class="btn btn-primary" onclick="sendMessage()">Wyślij</button>
+            </div>
+
+            <div class="d-grid gap-2">
+                <button class="btn btn-outline-primary" onclick="sendGroupMessage()">Wyślij wiadomość grupową</button>
+                <button class="btn btn-outline-success" onclick="joinGroup()">Dołącz do chatu grupowego</button>
+                <button class="btn btn-outline-danger" onclick="leaveGroup()">Opuść chat grupowy</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/7.0.5/signalr.min.js"></script>
